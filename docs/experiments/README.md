@@ -17,7 +17,7 @@ This repository contains hands-on experiments exploring modern React Native conc
 | Experiment | Status |
 |---|---|
 | R&D Dashboard | Completed |
-| Strict TypeScript API | Planned |
+| Strict TypeScript API | Completed |
 | Rendering | Planned |
 | React Native DevTools | Planned |
 | FlatList Performance | Planned |
