@@ -1,6 +1,6 @@
 import React from 'react';
-import Dashboard from './src/screens/Dashboard';
+import StrictTypeScriptDemo from './src/experiments/strict-typescript/StrictTypeScriptDemo';
 
 export default function App() {
-  return <Dashboard />;
+  return <StrictTypeScriptDemo />;
 }
