@@ -189,4 +189,148 @@ The Profiler provides a visual representation of component rendering and commit 
 
 **Stage 5: Completed** — Profiler and rendering analysis
 
+# Stage 6 — JavaScript Debugging
+
+## Objective
+
+Use React Native DevTools Sources debugger to pause JavaScript execution, inspect the debugging context, and resume execution.
+
+## Procedure
+
+1. Open the **Sources** panel.
+2. Open `RenderingDemo.tsx`.
+3. Set a breakpoint inside the `RenderingDemo` component.
+4. Trigger the corresponding application state update.
+5. Verify that JavaScript execution pauses at the breakpoint.
+6. Inspect the **Scope** and **Call Stack** panels.
+7. Resume execution using the debugger controls.
+
+## Result
+
+The breakpoint was successfully triggered in `RenderingDemo.tsx`.
+
+React Native DevTools paused JavaScript execution at the breakpoint.
+
+The **Scope** and **Call Stack** panels were available while execution was paused.
+
+Execution was successfully resumed using the debugger controls.
+
+## Observation
+
+React Native DevTools provides source-level JavaScript debugging for React Native applications. Breakpoints can be placed directly in the TypeScript source and used to inspect the execution context and call stack during runtime.
+
+**Stage 6: Completed**
+
+---
+
+## Experiment Status
+
+**Stage 1: Completed** — DevTools launch and connection
+
+**Stage 2: Completed** — Component inspection
+
+**Stage 3: Completed** — Props inspection
+
+**Stage 4: Completed** — State inspection
+
+**Stage 5: Completed** — Profiler and rendering analysis
+
+**Stage 6: Completed** — JavaScript debugging
+
+# Stage 6 — JavaScript Debugging
+
+## Objective
+
+Use React Native DevTools Sources debugger to pause JavaScript execution, inspect the debugging context, and resume execution.
+
+## Procedure
+
+1. Open the **Sources** panel.
+2. Open `RenderingDemo.tsx`.
+3. Set a breakpoint inside the `RenderingDemo` component.
+4. Trigger the corresponding application state update.
+5. Verify that JavaScript execution pauses at the breakpoint.
+6. Inspect the **Scope** and **Call Stack** panels.
+7. Resume execution using the debugger controls.
+
+## Result
+
+The breakpoint was successfully triggered in `RenderingDemo.tsx`.
+
+React Native DevTools paused JavaScript execution at the breakpoint.
+
+The **Scope** and **Call Stack** panels were available while execution was paused.
+
+Execution was successfully resumed using the debugger controls.
+
+## Observation
+
+React Native DevTools provides source-level JavaScript debugging for React Native applications. Breakpoints can be placed directly in the TypeScript source and used to inspect the execution context and call stack during runtime.
+
+**Stage 6: Completed**
+
+---
+
+## Experiment Status
+
+**Stage 1: Completed** — DevTools launch and connection
+
+**Stage 2: Completed** — Component inspection
+
+**Stage 3: Completed** — Props inspection
+
+**Stage 4: Completed** — State inspection
+
+**Stage 5: Completed** — Profiler and rendering analysis
+
+**Stage 6: Completed** — JavaScript debugging
+
+# Stage 6 — JavaScript Debugging
+
+## Objective
+
+Use React Native DevTools Sources debugger to pause JavaScript execution, inspect the debugging context, and resume execution.
+
+## Procedure
+
+1. Open the **Sources** panel.
+2. Open `RenderingDemo.tsx`.
+3. Set a breakpoint inside the `RenderingDemo` component.
+4. Trigger the corresponding application state update.
+5. Verify that JavaScript execution pauses at the breakpoint.
+6. Inspect the **Scope** and **Call Stack** panels.
+7. Resume execution using the debugger controls.
+
+## Result
+
+The breakpoint was successfully triggered in `RenderingDemo.tsx`.
+
+React Native DevTools paused JavaScript execution at the breakpoint.
+
+The **Scope** and **Call Stack** panels were available while execution was paused.
+
+Execution was successfully resumed using the debugger controls.
+
+## Observation
+
+React Native DevTools provides source-level JavaScript debugging for React Native applications. Breakpoints can be placed directly in the TypeScript source and used to inspect the execution context and call stack during runtime.
+
+**Stage 6: Completed**
+
+---
+
+## Experiment Status
+
+**Stage 1: Completed** — DevTools launch and connection
+
+**Stage 2: Completed** — Component inspection
+
+**Stage 3: Completed** — Props inspection
+
+**Stage 4: Completed** — State inspection
+
+**Stage 5: Completed** — Profiler and rendering analysis
+
+**Stage 6: Completed** — JavaScript debugging
+
 **Experiment 03: Completed**
