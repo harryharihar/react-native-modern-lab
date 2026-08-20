@@ -6,66 +6,70 @@
 
 ## Objective
 
-Explore React Native DevTools and understand how to inspect React Native components, props, state, component hierarchy, console output, and rendering behavior.
+Explore React Native DevTools and understand how to inspect React Native components, props, state, console output, and rendering behavior.
 
-## Topics
+---
 
-- React Native DevTools
-- Component inspection
-- Component tree
-- Props inspection
-- State inspection
-- Console
-- Profiler
-- Performance investigation
+# Stage 1 — Launch React Native DevTools
 
-## Experiment Plan
-
-### Stage 1 — Launch React Native DevTools
+## Objective
 
 Verify that React Native DevTools can connect to the running application.
 
-### Stage 2 — Component Inspection
+## Procedure
 
-Inspect the React component hierarchy and identify application components.
+1. Launch the React Native application.
+2. Open React Native DevTools.
+3. Confirm that the application is connected.
+4. Verify that the DevTools panels are available.
 
-### Stage 3 — Props Inspection
+## Result
 
-Inspect component props and understand how data flows between components.
+React Native DevTools successfully connected to the application.
 
-### Stage 4 — State Inspection
+The following panels were available:
 
-Inspect component state and observe state changes.
+- Console
+- Sources
+- Network
+- Performance
+- Memory
+- Components
+- Profiler
 
-### Stage 5 — Console
+## Observation
 
-Use the DevTools Console to inspect application output and debugging information.
+The React Native application was successfully connected to DevTools.
 
-### Stage 6 — Profiler
+**Stage 1: Completed**
 
-Use the Profiler to investigate component rendering.
+---
 
-### Stage 7 — Conclusion
+# Stage 2 — Component Inspection
 
-Document the findings and practical debugging workflow.
+## Objective
 
+Inspect the React component hierarchy.
 
+## Procedure
 
-## Stage 3 — Props Inspection
+1. Open the Components panel.
+2. Locate `RenderingDemo`.
+3. Expand the component tree.
+4. Inspect the child components.
 
-The Components panel was used to inspect component props.
+## Result
 
-### RenderingDemo
+`RenderingDemo` was successfully located in the component tree.
 
-Selecting `RenderingDemo` showed the component in the React component tree.
+The application contained components including:
 
-The DevTools panel exposed the component's hooks and debugging information.
-
-### ExpensiveChild
-
-Selecting `ExpensiveChild` allowed inspection of the props passed to the component.
-
-The experiment passes the current user name:
-
-```tsx
-<ExpensiveChild name={name} />
+```text
+App
+└── RenderingDemo
+    ├── ScrollView
+    ├── Text
+    ├── TouchableOpacity
+    ├── UserProfile
+    └── ExpensiveChild
+```
