@@ -83,3 +83,25 @@ The baseline implementation demonstrates an unnecessary child render.
 This gives us a measurable baseline before applying any optimization.
 
 Next we will test `React.memo` to prevent unnecessary rendering when the component props have not changed.
+
+
+## Stage 2 — React.memo Optimization
+
+The baseline implementation was modified to use `React.memo` for `ExpensiveChild`.
+
+### Change
+
+Before:
+
+```tsx
+function ExpensiveChild() {
+  // component implementation
+}
+const ExpensiveChild = React.memo(function ExpensiveChild() {
+  // component implementation
+});
+
+Counter: 0 → ExpensiveChild renders: 1
+Counter: 1 → ExpensiveChild renders: 1
+Counter: 2 → ExpensiveChild renders: 1
+Counter: 3 → ExpensiveChild renders: 1

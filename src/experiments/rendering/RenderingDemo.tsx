@@ -10,7 +10,7 @@ import {
 
 let renderCount = 0;
 
-function ExpensiveChild() {
+const ExpensiveChild = React.memo(function ExpensiveChild() {
   renderCount += 1;
 
   return (
@@ -19,7 +19,7 @@ function ExpensiveChild() {
       <Text>Render count: {renderCount}</Text>
     </View>
   );
-}
+});
 
 function UserProfile({name}: {name: string}) {
   return (
