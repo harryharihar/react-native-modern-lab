@@ -2,7 +2,7 @@
 
 ## Status
 
-🔄 In Progress
+✅ Completed
 
 ## Objective
 
@@ -105,3 +105,51 @@ After pressing **Change User**, the `name` prop changed from `"Harihar"` to `"Re
 The `ExpensiveChild` render count increased from `1` to `2`.
 
 This confirms that when the parent state changes, the updated value is passed to the child through props and the child renders again.
+
+
+---
+
+# Stage 4 — Profiler
+
+## Objective
+
+Use React Native DevTools Profiler to record component rendering and identify components that rendered during updates.
+
+## Procedure
+
+1. Open the **Profiler** panel.
+2. Start a profiling recording.
+3. Trigger the application state updates.
+4. Stop the recording.
+5. Inspect the Flamegraph and Ranked views.
+6. Select `RenderingDemo` and `ExpensiveChild` to inspect their rendering behavior.
+
+## Result
+
+The Profiler successfully recorded **3 commits**.
+
+The Flamegraph showed the `RenderingDemo` component and its child hierarchy during the recorded commits.
+
+`RenderingDemo` was recorded with a render duration of approximately **2.1ms** in one commit.
+
+`ExpensiveChild (Memo)` was shown as **did not render on the client during this profiling session** for the selected commit.
+
+## Observation
+
+The Profiler provides a visual representation of component rendering and commit timing. The recorded data can be used to identify components that render during state updates and components protected from unnecessary rendering by `memo`.
+
+**Stage 4: Completed**
+
+---
+
+## Experiment Status
+
+**Stage 1: Completed** — DevTools launch and connection
+
+**Stage 2: Completed** — Component inspection
+
+**Stage 3: Completed** — Props inspection
+
+**Stage 4: Completed** — Profiler and rendering analysis
+
+**Experiment 03: Completed**
