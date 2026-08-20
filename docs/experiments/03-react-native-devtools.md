@@ -109,7 +109,42 @@ This confirms that when the parent state changes, the updated value is passed to
 
 ---
 
-# Stage 4 — Profiler
+# Stage 4 — State Inspection
+
+## Objective
+
+Inspect React hook state using React Native DevTools and verify that state values can be observed directly on the selected component.
+
+## Procedure
+
+1. Open the **Components** panel.
+2. Select `RenderingDemo`.
+3. Inspect the **hooks** section in the right-side inspector.
+4. Observe the state values maintained by the component.
+5. Trigger state changes from the application and verify the updated values.
+
+## Result
+
+The `RenderingDemo` component was successfully inspected in React Native DevTools.
+
+The hooks inspector showed:
+
+```text
+State: 2
+State: "React Native"
+```
+
+The application displayed `Counter: 2` and the user value `React Native`, matching the state values shown by DevTools.
+
+## Observation
+
+React Native DevTools exposes React hook state for the selected component. This makes it possible to inspect the current state directly and correlate state changes in the application with the component state maintained by React.
+
+**Stage 4: Completed**
+
+---
+
+# Stage 5 — Profiler
 
 ## Objective
 
@@ -138,7 +173,7 @@ The Flamegraph showed the `RenderingDemo` component and its child hierarchy duri
 
 The Profiler provides a visual representation of component rendering and commit timing. The recorded data can be used to identify components that render during state updates and components protected from unnecessary rendering by `memo`.
 
-**Stage 4: Completed**
+**Stage 5: Completed**
 
 ---
 
@@ -150,6 +185,8 @@ The Profiler provides a visual representation of component rendering and commit 
 
 **Stage 3: Completed** — Props inspection
 
-**Stage 4: Completed** — Profiler and rendering analysis
+**Stage 4: Completed** — State inspection
+
+**Stage 5: Completed** — Profiler and rendering analysis
 
 **Experiment 03: Completed**
