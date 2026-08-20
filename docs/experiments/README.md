@@ -19,7 +19,8 @@ This repository contains hands-on experiments exploring modern React Native conc
 | R&D Dashboard | Completed |
 | Strict TypeScript API | Completed |
 | Rendering | Completed |
-| React Native DevTools | Planned |
+| React Native DevTools | Completed |
+| useCallback + React.memo | Completed |
 | FlatList Performance | Planned |
 | Android Edge-to-Edge | Planned |
 | Metro | Planned |

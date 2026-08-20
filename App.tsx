@@ -1,6 +1,6 @@
 import React from 'react';
-import RenderingDemo from './src/experiments/rendering/RenderingDemo';
+import UseCallbackDemo from './src/experiments/use-callback/UseCallbackDemo';
 
 export default function App() {
-  return <RenderingDemo />;
+  return <UseCallbackDemo />;
 }
