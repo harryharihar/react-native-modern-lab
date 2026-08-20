@@ -10,13 +10,14 @@ import {
 
 let renderCount = 0;
 
-const ExpensiveChild = React.memo(function ExpensiveChild() {
+const ExpensiveChild = React.memo(function ExpensiveChild({name,}:{name:string;}) {
   renderCount += 1;
 
   return (
     <View style={styles.card}>
       <Text style={styles.title}>Expensive Child</Text>
       <Text>Render count: {renderCount}</Text>
+      <Text>Received name: {name}</Text>
     </View>
   );
 });
@@ -64,7 +65,7 @@ export default function RenderingDemo() {
 
         <UserProfile name={name} />
 
-        <ExpensiveChild />
+        <ExpensiveChild name={name}/>
 
         <View style={styles.card}>
           <Text style={styles.title}>What to Observe</Text>
