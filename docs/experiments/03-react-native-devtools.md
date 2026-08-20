@@ -73,3 +73,35 @@ App
     ├── UserProfile
     └── ExpensiveChild
 ```
+---
+
+# Stage 3 — Props Inspection
+
+## Objective
+
+Inspect component props and verify how data is passed from the parent component to the child component.
+
+## Procedure
+
+1. Open the Components panel in React Native DevTools.
+2. Select `ExpensiveChild`.
+3. Inspect the `props` section in the right-side inspector.
+4. Observe the value of the `name` prop.
+
+## Result
+
+The `ExpensiveChild` component was successfully inspected.
+
+The DevTools props inspector showed:
+
+```text
+name: "Harihar"
+```
+
+## Observation
+
+After pressing **Change User**, the `name` prop changed from `"Harihar"` to `"React Native"`.
+
+The `ExpensiveChild` render count increased from `1` to `2`.
+
+This confirms that when the parent state changes, the updated value is passed to the child through props and the child renders again.
