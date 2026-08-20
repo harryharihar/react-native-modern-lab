@@ -1,6 +1,6 @@
 import React from 'react';
-import StrictTypeScriptDemo from './src/experiments/strict-typescript/StrictTypeScriptDemo';
+import RenderingDemo from './src/experiments/rendering/RenderingDemo';
 
 export default function App() {
-  return <StrictTypeScriptDemo />;
+  return <RenderingDemo />;
 }
