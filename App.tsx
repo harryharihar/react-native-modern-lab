@@ -1,6 +1,6 @@
 import React from 'react';
-import UseCallbackDemo from './src/experiments/use-callback/UseCallbackDemo';
+import FlatListDemo from './src/experiments/flatlist/FlatListDemo';
 
 export default function App() {
-  return <UseCallbackDemo />;
+  return <FlatListDemo />;
 }

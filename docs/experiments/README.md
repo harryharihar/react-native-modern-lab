@@ -21,7 +21,7 @@ This repository contains hands-on experiments exploring modern React Native conc
 | Rendering | Completed |
 | React Native DevTools | Completed |
 | useCallback + React.memo | Completed |
-| FlatList Performance | Planned |
+| FlatList Performance | Completed |
 | Android Edge-to-Edge | Planned |
 | Metro | Planned |
 | New Architecture | Planned |
