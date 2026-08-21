@@ -1,6 +1,6 @@
 import React from 'react';
-import FlatListDemo from './src/experiments/flatlist/FlatListDemo';
+import EdgeToEdgeDemo from './src/experiments/edge-to-edge/EdgeToEdgeDemo';
 
 export default function App() {
-  return <FlatListDemo />;
+  return <EdgeToEdgeDemo />;
 }
