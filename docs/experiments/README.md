@@ -23,7 +23,7 @@ This repository contains hands-on experiments exploring modern React Native conc
 | useCallback + React.memo | Completed |
 | FlatList Performance | Completed |
 | Android Edge-to-Edge | Completed |
-| Metro | Planned |
+| Metro | Completed |
 | New Architecture | Planned |
 | TurboModules | Planned |
 | JSI | Planned |
