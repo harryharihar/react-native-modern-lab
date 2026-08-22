@@ -1,6 +1,6 @@
 import React from 'react';
-import TurboModuleDemo from './src/experiments/turbomodule/TurboModuleDemo';
+import BackgroundNativeDemo from './src/experiments/js-performance/BackgroundNativeDemo';
 
 export default function App() {
-  return <TurboModuleDemo />;
+  return <BackgroundNativeDemo />;
 }

@@ -27,4 +27,6 @@ This repository contains hands-on experiments exploring modern React Native conc
 | New Architecture | Completed |
 | TurboModules | Completed |
 | JSI | Completed |
+| JS Performance | Completed |
+| Background Native Work | Completed |
 | Mobile AI | Planned |
