@@ -24,7 +24,7 @@ This repository contains hands-on experiments exploring modern React Native conc
 | FlatList Performance | Completed |
 | Android Edge-to-Edge | Completed |
 | Metro | Completed |
-| New Architecture | Planned |
-| TurboModules | Planned |
+| New Architecture | Completed |
+| TurboModules | Completed |
 | JSI | Planned |
 | Mobile AI | Planned |
