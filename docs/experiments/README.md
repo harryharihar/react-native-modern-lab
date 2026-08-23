@@ -29,4 +29,5 @@ This repository contains hands-on experiments exploring modern React Native conc
 | JSI | Completed |
 | JS Performance | Completed |
 | Background Native Work | Completed |
+| Fabric Native Component | Completed |
 | Mobile AI | Planned |

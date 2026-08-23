@@ -41,7 +41,12 @@
   },
   "codegenConfig": {
     "name": "RNModernLabSpec",
-    "type": "modules",
-    "jsSrcsDir": "specs"
+    "type": "all",
+    "jsSrcsDir": "specs",
+    "ios": {
+      "componentProvider": {
+        "NativeLabView": "NativeLabView"
+      }
+    }
   }
 }

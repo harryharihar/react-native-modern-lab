@@ -10,6 +10,7 @@
 		0C80B921A6F3F58F76C31292 /* libPods-RNModernLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RNModernLab.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		187BA75B3039E9F3001FAF23 /* NativeLabModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 187BA75A3039E9F2001FAF23 /* NativeLabModule.mm */; };
+		18BDF698303AE18200AFCDBC /* NativeLabView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18BDF697303AE18200AFCDBC /* NativeLabView.mm */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B28003E0E38C565516E5AE1B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
@@ -22,6 +23,8 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = RNModernLab/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		187BA7593039E9F2001FAF23 /* NativeLabModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NativeLabModule.h; path = RNModernLab/NativeLabModule.h; sourceTree = "<group>"; };
 		187BA75A3039E9F2001FAF23 /* NativeLabModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = NativeLabModule.mm; path = RNModernLab/NativeLabModule.mm; sourceTree = "<group>"; };
+		187BA75F303AC4EF001FAF23 /* NativeLabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NativeLabView.h; path = RNModernLab/NativeLabView.h; sourceTree = "<group>"; };
+		18BDF697303AE18200AFCDBC /* NativeLabView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = NativeLabView.mm; path = RNModernLab/NativeLabView.mm; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RNModernLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNModernLab.debug.xcconfig"; path = "Target Support Files/Pods-RNModernLab/Pods-RNModernLab.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RNModernLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNModernLab.release.xcconfig"; path = "Target Support Files/Pods-RNModernLab/Pods-RNModernLab.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RNModernLab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNModernLab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,8 @@
 		13B07FAE1A68108700A75B9A /* RNModernLab */ = {
 			isa = PBXGroup;
 			children = (
+				18BDF697303AE18200AFCDBC /* NativeLabView.mm */,
+				187BA75F303AC4EF001FAF23 /* NativeLabView.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -253,6 +258,7 @@
 			files = (
 				187BA75B3039E9F3001FAF23 /* NativeLabModule.mm in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				18BDF698303AE18200AFCDBC /* NativeLabView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +273,84 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTDeprecation\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTSwiftUIWrapper\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core-prebuilt\"",
+					"\"${PODS_ROOT}/Headers/Public/React-CoreModules\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricComponents\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFBReactNativeSpec\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTRuntime\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTSettings\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTVibration\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-defaultsnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-domnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflags\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflagsnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-idlecallbacksnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-intersectionobservernativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectorcdp\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectornetwork\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectortracing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsitooling\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-microtasksnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-mutationobservernativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-networking\"",
+					"\"${PODS_ROOT}/Headers/Public/React-oscompat\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-performancecdpmetrics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-performancetimeline\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererconsistency\"",
+					"\"${PODS_ROOT}/Headers/Public/React-renderercss\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-timing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/React-viewtransitionnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-webperformancenativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactAppDependencyProvider\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCodegen\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactNativeDependencies\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/Headers/Private/Yoga\"",
+					"$(SRCROOT)/build/generated/ios/ReactCodegen/**",
+				);
 				INFOPLIST_FILE = RNModernLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -296,6 +380,84 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTDeprecation\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTSwiftUIWrapper\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core-prebuilt\"",
+					"\"${PODS_ROOT}/Headers/Public/React-CoreModules\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricComponents\"",
+					"\"${PODS_ROOT}/Headers/Public/React-FabricImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-ImageManager\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Mapbuffer\"",
+					"\"${PODS_ROOT}/Headers/Public/React-NativeModulesApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAnimation\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTAppDelegate\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFBReactNativeSpec\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTFabric\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTImage\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTRuntime\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTSettings\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTVibration\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeApple\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeCore\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RuntimeHermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-debug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-defaultsnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-domnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflags\"",
+					"\"${PODS_ROOT}/Headers/Public/React-featureflagsnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-graphics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-hermes\"",
+					"\"${PODS_ROOT}/Headers/Public/React-idlecallbacksnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-intersectionobservernativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jserrorhandler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectorcdp\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectornetwork\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspectortracing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsitooling\"",
+					"\"${PODS_ROOT}/Headers/Public/React-logger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-microtasksnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-mutationobservernativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-networking\"",
+					"\"${PODS_ROOT}/Headers/Public/React-oscompat\"",
+					"\"${PODS_ROOT}/Headers/Public/React-perflogger\"",
+					"\"${PODS_ROOT}/Headers/Public/React-performancecdpmetrics\"",
+					"\"${PODS_ROOT}/Headers/Public/React-performancetimeline\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererconsistency\"",
+					"\"${PODS_ROOT}/Headers/Public/React-renderercss\"",
+					"\"${PODS_ROOT}/Headers/Public/React-rendererdebug\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimescheduler\"",
+					"\"${PODS_ROOT}/Headers/Public/React-timing\"",
+					"\"${PODS_ROOT}/Headers/Public/React-utils\"",
+					"\"${PODS_ROOT}/Headers/Public/React-viewtransitionnativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/React-webperformancenativemodule\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactAppDependencyProvider\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCodegen\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactNativeDependencies\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/Headers/Private/Yoga\"",
+					"$(SRCROOT)/build/generated/ios/ReactCodegen/**",
+				);
 				INFOPLIST_FILE = RNModernLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (

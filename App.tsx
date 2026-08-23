@@ -1,6 +1,6 @@
 import React from 'react';
-import BackgroundNativeDemo from './src/experiments/js-performance/BackgroundNativeDemo';
+import FabricDemo from './src/experiments/fabric/FabricDemo';
 
 export default function App() {
-  return <BackgroundNativeDemo />;
+  return <FabricDemo />;
 }
