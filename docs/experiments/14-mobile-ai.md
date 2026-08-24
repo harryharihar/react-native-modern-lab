@@ -346,3 +346,144 @@ Progressive UI
 ```
 
 The experiment successfully established the foundation for more advanced Mobile AI capabilities including structured AI responses, tool calling, RAG, voice AI, and agentic workflows.
+
+## 10. Running the AI Backend
+
+The Mobile AI experiment requires the Express backend to be running locally before the React Native application can send AI requests.
+
+### Install backend dependencies
+
+From the project root:
+
+```bash
+cd server
+npm install
+```
+
+### Configure the OpenAI API key
+
+Create the backend environment file:
+
+```text
+server/.env
+```
+
+Add the OpenAI API key:
+
+```text
+OPENAI_API_KEY=your_api_key_here
+```
+
+The `.env` file is excluded from Git through `server/.gitignore`.
+
+### Start the backend
+
+From the `server` directory:
+
+```bash
+npm run dev
+```
+
+The backend starts on:
+
+```text
+http://localhost:3000
+```
+
+The health endpoint can be checked using:
+
+```bash
+curl http://localhost:3000/health
+```
+
+Expected response:
+
+```json
+{
+  "status": "ok",
+  "service": "mobile-ai-backend"
+}
+```
+
+The React Native application must be running separately through Metro.
+
+The complete local development setup is:
+
+```text
+Terminal 1
+
+cd server
+npm run dev
+
+        ↓
+
+Express Backend
+http://localhost:3000
+
+        ↑
+
+React Native Application
+
+Terminal 2
+
+npm start
+```
+
+The backend must remain running while testing the Mobile AI experiment in the simulator.
+
+## 11. Markdown Response Rendering
+
+LLM responses commonly contain Markdown formatting such as headings, bold text, lists, and other structured content.
+
+The React Native application uses `react-native-marked` to parse the generated Markdown before displaying it in the UI.
+
+This prevents raw Markdown syntax such as `###` and `**text**` from appearing directly in the application.
+
+The response is rendered progressively while the streamed content is being received.
+
+## 12. Streaming UI Optimization
+
+The OpenAI Responses API produces incremental output events, which are forwarded by the Express backend to the React Native application.
+
+The React Native client receives these pieces through `XMLHttpRequest` and its `onprogress` callback.
+
+Individual network chunks can be very small. Updating React state for every individual chunk can cause unnecessary rendering work.
+
+The implementation therefore temporarily buffers incoming chunks and updates React state approximately every 80 milliseconds.
+
+The resulting flow is:
+
+```text
+OpenAI Streaming Output
+        ↓
+Express Backend
+        ↓
+HTTP Streaming Response
+        ↓
+XMLHttpRequest onprogress
+        ↓
+Client Buffer
+        ↓
+Periodic React State Update
+        ↓
+Markdown Rendering
+        ↓
+Progressive UI
+```
+
+This preserves the streaming experience while reducing unnecessary React renders.
+
+## 13. Final Result
+
+Experiment 14 now demonstrates a complete Mobile AI request pipeline including:
+
+- Secure server-side API key handling
+- Express backend integration
+- OpenAI Responses API
+- Normal LLM requests
+- Streaming LLM requests
+- React Native incremental response handling
+- Buffered streaming UI updates
+- Markdown response rendering
+- Progressive AI response presentation
+- Error handling

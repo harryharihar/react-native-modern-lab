@@ -2,13 +2,13 @@ export interface AIResponse {
   response: string;
 }
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = "http://localhost:3000";
 
 export async function askAI(prompt: string): Promise<string> {
   const response = await fetch(`${API_BASE_URL}/ai/chat`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       prompt,
@@ -23,7 +23,7 @@ export async function askAI(prompt: string): Promise<string> {
     );
   }
 
-  const data: AIResponse = await response.json();
+  const data = (await response.json()) as AIResponse;
 
   return data.response;
 }
@@ -37,9 +37,9 @@ export function streamAI(
 
     let lastResponseLength = 0;
 
-    xhr.open('POST', `${API_BASE_URL}/ai/chat/stream`);
+    xhr.open("POST", `${API_BASE_URL}/ai/chat/stream`);
 
-    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader("Content-Type", "application/json");
 
     xhr.onprogress = () => {
       const currentResponse = xhr.responseText;
@@ -74,11 +74,15 @@ export function streamAI(
     };
 
     xhr.onerror = () => {
-      reject(new Error('Network error while streaming AI response.'));
+      reject(
+        new Error("Network error while streaming AI response."),
+      );
     };
 
     xhr.ontimeout = () => {
-      reject(new Error('AI streaming request timed out.'));
+      reject(
+        new Error("AI streaming request timed out."),
+      );
     };
 
     xhr.send(
